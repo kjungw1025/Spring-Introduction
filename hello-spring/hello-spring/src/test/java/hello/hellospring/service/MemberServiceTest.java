@@ -15,9 +15,11 @@ class MemberServiceTest {
     MemoryMemberRepository memberRepository;
     // MemberService에서 private final MemberRepository memberRepository = new MemoryMemberRepository();와
     // 여기서 new MemoryMemberRepository()는 서로 다름
-
-    @BeforeEach
-    // 이런걸 DI, Dependency Injection?
+    
+    
+    @BeforeEach // 각 테스트 실행 전에 호출됨
+    // 이런걸 DI, Dependency Injection
+    // 객체 의존관계를 외부에서 넣어주는 것
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();
         memberService = new MemberService(memberRepository);
