@@ -16,7 +16,18 @@ public class MemberController {
     */
     private final MemberService memberService;
 
+//    // 필드 주입
+//    @Autowired private MemberService memberService;
+
+//    // setter 주입
+//    @Autowired
+//    public void setMemberService(MemberService memberService) {
+//        this.memberService = memberService;
+//    }
+
+
     // ctrl + n --> constructor 검색 후 memberService 선택하여 생성자 생성 가능
+    // 생성자 주입
     @Autowired  // Autowired를 하면, 스프링 컨테이너에서 memberService를 가져다가 연결해줌
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
