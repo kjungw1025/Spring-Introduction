@@ -5,10 +5,12 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 //@Service // memberService.java에 @Service를 추가해주면 스프링이 올라올 때, 컨테이너에 memberService에 등록해줌
 public class MemberService {
     private final MemberRepository memberRepository;
