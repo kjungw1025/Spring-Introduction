@@ -24,7 +24,6 @@ public class SpringConfig {
 //    public SpringConfig(EntityManager em) {
 //        this.em = em;
 //    }
-
     //    private final DataSource dataSource;
 //
 //    public SpringConfig (DataSource dataSource) {
@@ -34,7 +33,6 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
-
 //    @Bean
 //    public MemberRepository memberRepository() {
 //        return new JdbcMemberRepository(dataSource);
